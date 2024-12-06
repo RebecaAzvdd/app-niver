@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário meu bem</title>
+    <link rel="stylesheet" href="libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Tela 1: Boas-vindas -->
+        <section id="welcome-screen" class="screen visible">
+            <h1>Feliz Aniversário, Meu Bem!</h1>
+            <p>Eu não sou muito de cartinhas então esse é o meu jeito de fazer uma...</p>
+            <button id="start-button">Começar 🎉</button>
+        </section>
+
+        <!-- Tela 2: Mini Jogo -->
+        <section id="game-screen" class="screen hidden">
+            <h2>Clique nos corações</h2>
+            <div id="game-area"></div>
+        </section>
+
+        <!-- Tela 3: Galeria de Memórias -->
+        <section id="gallery-screen" class="screen hidden">
+            <h2>Acho que te amo, sabia?</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/1.jpeg" alt="Foto 1"></div>
+                    <div class="swiper-slide"><img src="images/2.jpeg" alt="Foto 1"></div>
+                    <div class="swiper-slide"><img src="images/3.jpeg" alt="Foto 1"></div>
+                    <div class="swiper-slide"><img src="images/4.jpeg" alt="Foto 1"></div>
+                    <div class="swiper-slide"><img src="images/5.jpeg" alt="Foto 1"></div>
+                    <div class="swiper-slide"><img src="images/6.jpeg" alt="Foto 1"></div>
+                    <div class="swiper-slide"><img src="images/7.jpeg" alt="Foto 1"></div>
+                    <div class="swiper-slide"><img src="images/8.jpeg" alt="Foto 1"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Tela 4: Mensagem Final -->
+        <section id="final-screen" class="screen hidden">
+            <h2>Te amo muito! 💕</h2>
+            <p>Obrigado por fazer parte da minha vida.</p>
+            <button id="restart-button">Recomeçar</button>
+        </section>
+    </div>
+
+    <div id="message-modal" class="hidden">
+        <div id="modal-content">
+            <p id="modal-text"></p>
+            <button id="close-modal">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Bibliotecas JS -->
+    <script defer src="libs/gsap.min.js"></script>
+    <script defer src="libs/swiper-bundle.min.js"></script>
+    <script defer src="script.js"></script>
+</body>
+</html>
