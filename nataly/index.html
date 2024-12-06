@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="title">Nataly</div>
+        <div class="menu">
+            <button id="menu-button">☰</button>
+            <nav id="menu-links" class="hidden">
+                <ul>
+                    <li><a>Início</a></li>
+                    <li><a>Jogo</a></li>
+                    <li><a>Galeria</a></li>
+                    <li><a>Quiz</a></li>
+                    <li><a>Final</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
     <div id="app">
         <!-- Tela 1: Boas-vindas -->
         <section id="welcome-screen" class="screen visible">
@@ -36,26 +53,73 @@
                     <div class="swiper-slide"><img src="images/7.jpeg" alt="Foto 1"></div>
                     <div class="swiper-slide"><img src="images/8.jpeg" alt="Foto 1"></div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
+        </section>
+
+        <section id="quiz-screen" class="screen hidden">
+            <h2>Quiz... Sobre mim claro!</h2>
+            <div id="quiz-area">
+                <div class="question">
+                    <p>Qual cidade eu mais amo?</p>
+                    <button class="answer" data-answer="F" data-option="São Paulo">São Paulo</button>
+                    <button class="answer" data-answer="F" data-option="Rio de Janeiro">Rio de Janeiro</button>
+                    <button class="answer" data-answer="F" data-option="Curitiba">Curitiba</button>
+                    <button class="answer" data-answer="F" data-option="Santa Catarina">Santa Catarina</button>
+                </div>
+            
+                <div class="question">
+                    <p>Qual é a minha comida favorita?</p>
+                    <button class="answer" data-answer="L" data-option="Macarrão">Macarrão</button>
+                    <button class="answer" data-answer="L" data-option="Feijão">Feijão</button>
+                    <button class="answer" data-answer="L" data-option="Lasanha">Lasanha</button>
+                    <button class="answer" data-answer="L" data-option="Sorvete">Sorvete</button>
+                </div>
+            
+                <div class="question">
+                    <p>Qual é o meu animal favorito?</p>
+                    <button class="answer" data-answer="O" data-option="Gato">Gato</button>
+                    <button class="answer" data-answer="O" data-option="Cachorro">Cachorro</button>
+                    <button class="answer" data-answer="O" data-option="Coelho">Coelho</button>
+                    <button class="answer" data-answer="O" data-option="Leão">Leão</button>
+                </div>
+            
+                <div class="question">
+                    <p>Qual é a minha cor favorita?</p>
+                    <button class="answer" data-answer="R" data-option="Verde">Verde</button>
+                    <button class="answer" data-answer="R" data-option="Roxo">Roxo</button>
+                    <button class="answer" data-answer="R" data-option="Vermelho">Vermelho</button>
+                    <button class="answer" data-answer="R" data-option="Amarelo">Amarelo</button>
+                </div>
+            </div>            
+            <div id="word-box" class="hidden">
+                <p id="word">Palavra formada: </p>
+                <span id="flor-word"></span>
+            </div>
+            <button id="next-screen" class="hidden">Próximo</button>
         </section>
 
         <!-- Tela 4: Mensagem Final -->
         <section id="final-screen" class="screen hidden">
             <h2>Te amo muito! 💕</h2>
-            <p>Obrigado por fazer parte da minha vida.</p>
+            <p>Obrigado por fazer parte da minha vida, vou continuar mostrando que sou diferente mas faço o meu melhor sendo diferente meu bem!!!</p>
             <button id="restart-button">Recomeçar</button>
         </section>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <p>@ByRebeca para Meu Bem</p>
+    </footer>
+
+    <!-- Modal -->
     <div id="message-modal" class="hidden">
         <div id="modal-content">
             <p id="modal-text"></p>
             <button id="close-modal">Fechar</button>
         </div>
     </div>
+    <audio id="background-audio" src="audio/song.mp3" preload="auto"></audio>
 
     <!-- Bibliotecas JS -->
     <script defer src="libs/gsap.min.js"></script>
