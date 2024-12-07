@@ -112,10 +112,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupQuiz() {
         quizArea.innerHTML = '';
         const questions = [
-            { question: 'Qual cidade eu mais amo?', correctAnswer: 'Santa Catarina', options: ['São Paulo', 'Rio de Janeiro', 'Curitiba', 'Santa Catarina'] },
-            { question: 'Qual é a minha comida favorita?', correctAnswer: 'Macarrão', options: ['Macarrão', 'Feijão', 'Lasanha', 'Sorvete'] },
-            { question: 'Qual é o meu animal favorito?', correctAnswer: 'Gato', options: ['Gato', 'Cachorro', 'Coelho', 'Leão'] },
-            { question: 'Qual é a minha cor favorita?', correctAnswer: 'Roxo', options: ['Verde', 'Roxo', 'Vermelho', 'Amarelo'] },
+            {
+                question: 'O que me chamou mais atenção em ti?',
+                correctAnswer: 'Sorriso',
+                options: ['Sorriso', 'Cabelo', 'Olhões', 'Voz']
+            },
+            {
+                question: 'O que eu mais quero fazer com você?',
+                correctAnswer: 'Dormir',
+                options: ['Cozinhar', 'Viajar', 'Dormir', 'Assistir Harry Potter']
+            },
+            {
+                question: 'Qual vai ser a cor do nosso gatinho?',
+                correctAnswer: 'Ruivo',
+                options: ['Preto', 'Branco', 'Ruivo', 'Branco e Preto']
+            },
+            {
+                question: 'Qual é a qualidade que mais admiro em ti?',
+                correctAnswer: 'Humor',
+                options: ['Sinceridade', 'Empatia', 'Humor']
+            },
         ];
     
         // Gerar a primeira pergunta
